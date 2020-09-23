@@ -35,10 +35,6 @@ mongoose.connect( "mongodb+srv://mayodee597:rT7)tP2&qs@cluster0.kul51.mongodb.ne
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
-/*
-});
-*/
-
 app.listen(PORT, () => {
   console.log("App running on port 3000!");
 });
