@@ -1,0 +1,5 @@
+# Ignore  files  below
+.DS_store/
+
+# Ignore folder  below
+node_modules/
