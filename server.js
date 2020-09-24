@@ -21,8 +21,6 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const routes = require('./routes/api-routes');
 
-//mongodb+srv://mayodee597:rT7)tP2&qs@cluster0.kul51.mongodb.net/exerciseFitnessdb?retryWrites=true&w=majority;
-
 app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
