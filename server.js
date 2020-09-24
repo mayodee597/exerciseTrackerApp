@@ -30,8 +30,8 @@ app.use(express.static("public"));
 
 //mongoose.connect(process.env.MONGODB_URI  ||  "mongodb://localhost/exerciseFitnessdb",  { useNewUrlParser: true  });
 mongoose.connect( "mongodb+srv://mayodee597:rT7)tP2&qs@cluster0.kul51.mongodb.net/exerciseFitnessdb?retryWrites=true&w=majority",  { useNewUrlParser: true, useUnifiedTopology: true  });
-require("./exerciseTrackerApp/routes/html-routes.js")(app);
-require("./exerciseTrackerApp/routes/api-routes.js")(app);
+require("./Develop/exerciseTrackerApp/routes/html-routes.js")(app);
+require("./Develop/exerciseTrackerApp/routes/api-routes.js")(app);
 
 app.listen(PORT, () => {
   console.log("App running on port 3000!");
