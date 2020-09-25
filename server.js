@@ -21,6 +21,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 //const routes = require('./routes/api-routes');
 
+//mongodb+srv://mayodee597:rT7)tP2&qs@cluster0.kul51.mongodb.net/exerciseFitnessdb?retryWrites=true&w=majority;
+
+
 app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
@@ -28,11 +31,11 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-//mongoose.connect(process.env.MONGODB_URI  ||  "mongodb://localhost/exerciseFitnessdb",  { useNewUrlParser: true  });
-mongoose.connect( "mongodb+srv://mayodee597:rT7)tP2&qs@cluster0.kul51.mongodb.net/exerciseFitnessdb?retryWrites=true&w=majority",  { useNewUrlParser: true, useUnifiedTopology: true  });
-require("./Develop/exerciseTrackerApp/routes/html-routes.js")(app);
-require("./Develop/exerciseTrackerApp/routes/api-routes.js")(app);
+mongoose.connect(process.env.MONGODB_URI  ||  "mongodb://localhost/exerciseFitnessdb",  { useNewUrlParser: true  });
+ 
+require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
-app.listen(PORT, () => {
+app.listen(3000, () => {
   console.log("App running on port 3000!");
 });
